@@ -1,6 +1,6 @@
 package personnel;
 
-public class Doctor extends Employee {
+public class Doctor extends Employee implements MedicalDuties{
 
 	protected String speciality;
 	
@@ -15,6 +15,14 @@ public class Doctor extends Employee {
 
 	public int calculatePay() {
 		return 90000;
+	}
+
+	public void careForPatient(Patient patient) {
+		patient.receiveHealthCare(10);
+	}
+
+	public void drawBlood(Patient patient) {
+		patient.removeBlood();
 	}
 	
 	

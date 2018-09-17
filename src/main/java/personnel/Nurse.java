@@ -19,12 +19,11 @@ public class Nurse extends Employee implements MedicalDuties{
 	}
 
 	public void careForPatient(Patient patient) {
-		patient.healthCare(5);
+		patient.receiveHealthCare(5);
 	}
 
-	@Override
-	public void drawBlood() {
-		
+	public void drawBlood(Patient patient) {
+		patient.removeBlood();
 	}
 
 

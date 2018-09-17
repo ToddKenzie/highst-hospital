@@ -6,14 +6,13 @@ public class EmergencyDispatcher extends Receptionist implements MedicalDuties {
 		super(empName, empNumber, isOnPhone);
 	}
 
-	@Override
-	public void drawBlood() {
-
+	public void drawBlood(Patient patient) {
+		patient.removeBlood();
 	}
 
 	@Override
 	public void careForPatient(Patient patient) {
-		patient.healthCare(5);
+		patient.receiveHealthCare(5);
 	}
 
 }

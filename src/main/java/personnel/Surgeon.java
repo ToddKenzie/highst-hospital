@@ -17,12 +17,12 @@ public class Surgeon extends Doctor implements MedicalDuties {
 		return 120000;
 	}
 
-	public void drawBlood() {
-
-	}
-
 	public void careForPatient(Patient patient) {
-		patient.healthCare(10);
+		patient.receiveHealthCare(10);
+	}
+	
+	public void drawBlood(Patient patient) {
+		patient.removeBlood();
 	}
 
 }
